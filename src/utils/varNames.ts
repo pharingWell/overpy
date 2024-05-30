@@ -17,11 +17,11 @@
 
 "use strict";
 
-import { parse } from "../compiler/parser";
-import { defaultSubroutineNames, defaultVarNames, globalInitDirectives, globalVariables, playerInitDirectives, playerVariables, reservedMemberNames, reservedNames, reservedSubroutineNames, subroutines } from "../globalVars";
-import { Token } from "../types";
-import { Ast } from "./ast";
-import { error } from "./logging";
+import { parse } from "../compiler/parser.js";
+import { defaultSubroutineNames, defaultVarNames, globalInitDirectives, globalVariables, playerInitDirectives, playerVariables, reservedMemberNames, reservedNames, reservedSubroutineNames, subroutines } from "../globalVars.js";
+import { Token } from "../types.js";
+import { Ast } from "./ast.js";
+import { error } from "./logging.js";
 
 /** Translates a subroutine name from Overwatch to its OverPy version */
 export function translateSubroutineToPy(content: string): string {

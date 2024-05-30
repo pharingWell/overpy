@@ -15,13 +15,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { customGameSettingsSchema } from "../data/customGameSettings";
-import { DEBUG_MODE, activatedExtensions, builtInJsFunctions, builtInJsFunctionsNbLines, fileStack, globalSuppressedWarnings, macros, optimizeForSize, replacementFor0, replacementFor1, replacementForTeam1, reservedNames, setOptimizationEnabled, setOptimizationForSize, setReplacementFor0, setReplacementFor1, setReplacementForTeam1 } from "../globalVars";
-import { getArgs, getBracketPositions } from "../utils/decompilation";
-import { getFileContent, getFilePaths, getFilenameFromPath } from "../utils/file";
-import { debug, error, warn } from "../utils/logging";
-import { getFileStackCopy, isVarChar, safeEval } from "../utils/other";
-import { FileStackMember, FunctionMacroData, MacroData, MacroFileStackMember, ScriptFileStackMember } from "../types";
+import { customGameSettingsSchema } from "../data/customGameSettings.js";
+import { DEBUG_MODE, activatedExtensions, builtInJsFunctions, builtInJsFunctionsNbLines, fileStack, globalSuppressedWarnings, macros, optimizeForSize, replacementFor0, replacementFor1, replacementForTeam1, reservedNames, setOptimizationEnabled, setOptimizationForSize, setReplacementFor0, setReplacementFor1, setReplacementForTeam1 } from "../globalVars.js";
+import { getArgs, getBracketPositions } from "../utils/decompilation.js";
+import { getFileContent, getFilePaths, getFilenameFromPath } from "../utils/file.js";
+import { debug, error, warn } from "../utils/logging.js";
+import { getFileStackCopy, isVarChar, safeEval } from "../utils/other.js";
+import { FileStackMember, FunctionMacroData, MacroData, MacroFileStackMember, ScriptFileStackMember } from "../types.js";
 
 export class Macro {
 	isFunction: boolean;

@@ -17,8 +17,8 @@
 
 "use strict";
 
-import { Token } from "../types";
-import { error } from "./logging";
+import { Token } from "../types.js";
+import { error } from "./logging.js";
 /**
  * Same as splitStrOnDelimiter but for a token list.
  * If getAllTokens = false, this will only split on the first occurrence of the token.

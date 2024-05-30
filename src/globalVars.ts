@@ -16,17 +16,17 @@
  */
 
 // @ts-check
-import { mapKw } from "./data/maps";
-import { opyKeywords } from "./data/opy/keywords";
-import { camelCaseToUpperCase } from "./utils/other";
+import { mapKw } from "./data/maps.js";
+import { opyKeywords } from "./data/opy/keywords.js";
+import { camelCaseToUpperCase } from "./utils/other.js";
 
 
 "use strict";
 import { QuickJSContext, getQuickJS } from "quickjs-emscripten";
-import { funcKw } from "./data/other";
-import { constantValues } from "./data/constants";
-import { FileStackMember, OWLanguage, Subroutine, Variable } from "./types";
-import { Ast } from "./utils/ast";
+import { funcKw } from "./data/other.js";
+import { constantValues } from "./data/constants.js";
+import { FileStackMember, OWLanguage, Subroutine, Variable } from "./types.js";
+import { Ast } from "./utils/ast.js";
 
 
 export var globalVariables: Variable[];
@@ -164,38 +164,31 @@ export var availableExtensionPoints: number;
   *
   * Is reset at each rule.
 */
-export var decompilerGotos;
+export var decompilerGotos: Array<Object>;
 
 /** Global variable used for the number of tabs.
  *
  * Is reset at each rule.
 */
-export var nbTabs;
+export var nbTabs: number;
 
 /** Global variable used to mark the action number of the last loop in the rule.
  *
  * Is reset at each rule.
 */
-export var decompilationLabelNumber;
-
-/** Global variable used to keep track of operator precedence.
- *
- * Is reset at each action and rule condition.
-*/
-export var operatorPrecedenceStack;
+export var decompilationLabelNumber: number;
 
 
-export function resetGlobalVariables(language: string) {
+export function resetGlobalVariables(language: OWLanguage) {
 	rootPath = "";
-	currentArrayElementName = null;
-	currentArrayIndexName = null;
+	currentArrayElementName = "";
+	currentArrayIndexName = "";
 	currentLanguage = language;
 	currentRuleEvent = "";
 	macros = [];
 	fileStack = [];
 	decompilerGotos = [];
 	nbTabs = 0;
-	operatorPrecedenceStack = [];
 	globalVariables = [];
 	playerVariables = [];
 	subroutines = [];
@@ -345,7 +338,7 @@ export const bigLettersMappings = {
 }
 
 //Fullwidth characters
-export var fullwidthMappings = {
+export var fullwidthMappings: { [id: string]: string; } = {
 	" ": " ",
 	"¥": "￥",
 	"₩": "￦",
@@ -372,7 +365,8 @@ for (var chr of workshopSettingWhitespaceChars) {
 workshopSettingWhitespace.sort();
 
 
-export const typeTree = [
+export const typeTree : (string | Object | typeof constantValues)[] =
+[
 	{"Object": [
 		"Player",
 		{"float": [
@@ -443,15 +437,15 @@ export const typeTree = [
 	"ButtonLiteral",
 	"ColorLiteral",
 
-	{"StringLiteral": [
-		"LocalizedStringLiteral",
-		{"CustomStringLiteral": [
-			"FullwidthStringLiteral",
-			"BigLettersStringLiteral",
-			"PlaintextStringLiteral",
-			"CaseSensitiveStringLiteral",
-		]}
-	]},
+	// {"StringLiteral": [
+	// 	"LocalizedStringLiteral",
+	// 	{"CustomStringLiteral": [
+	// 		"FullwidthStringLiteral",
+	// 		"BigLettersStringLiteral",
+	// 		"PlaintextStringLiteral",
+	// 		"CaseSensitiveStringLiteral",
+	// 	]}
+	// ]},
 
 	"Value",
 	"Raycast",
@@ -462,7 +456,7 @@ export const typeTree = [
 //For example, typeMatrix["float"] = ["float", "int", etc].
 export const typeMatrix: Record<string, string[]> = {};
 
-function fillTypeMatrix(tree) {
+function fillTypeMatrix(tree: string | Record<string, any> ){
 	if (typeof tree === "string") {
 		typeMatrix[tree] = [tree];
 

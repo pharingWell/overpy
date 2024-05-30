@@ -16,7 +16,7 @@
  */
 
 "use strict";
-import { customGameSettingsSchema } from "../customGameSettings";
+import { customGameSettingsSchema } from "../customGameSettings.js";
 
 export const preprocessingDirectives: Record<string, {
     description: string,

@@ -1,4 +1,4 @@
-import { LocalizableString } from "../types";
+import { LocalizableString } from "../types.js";
 
 export const argNamesKw: Record<string, LocalizableString> =
 //begin-json

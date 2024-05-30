@@ -17,8 +17,8 @@
 
 "use strict";
 
-import { IS_IN_BROWSER, evalVm, fileStack, incrementUniqueNumber, uniqueNumber } from "../globalVars";
-import { error } from "./logging";
+import { IS_IN_BROWSER, evalVm, fileStack, incrementUniqueNumber, uniqueNumber } from "../globalVars.js";
+import { error } from "./logging.js";
 
 
 //camelCase -> UPPER_CASE

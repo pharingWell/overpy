@@ -17,10 +17,10 @@
 
 "use strict";
 
-import { stringKw } from "../data/localizedStrings";
-import { currentLanguage, fileStack, setFileStack } from "../globalVars";
-import { LocalizableString, Token, Value } from "../types";
-import { debug, error } from "./logging";
+import { stringKw } from "../data/localizedStrings.js";
+import { currentLanguage, fileStack, setFileStack } from "../globalVars.js";
+import { LocalizableString, Token, Value } from "../types.js";
+import { debug, error } from "./logging.js";
 
 /**
  * Translates a keyword to the other language.

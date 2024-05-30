@@ -15,11 +15,11 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { LocalizableString } from "../types";
-import { heroKw } from "../data/heroes";
-import { mapKw } from "../data/maps";
-import { gamemodeKw } from "../data/gamemodes";
-import { camelCaseToUpperCase } from "../utils/other";
+import { LocalizableString } from "../types.js";
+import { heroKw } from "../data/heroes.js";
+import { mapKw } from "../data/maps.js";
+import { gamemodeKw } from "../data/gamemodes.js";
+import { camelCaseToUpperCase } from "../utils/other.js";
 
 export type Constant = LocalizableString & {
     extension?: string,
@@ -29,7 +29,7 @@ export type Constant = LocalizableString & {
     onlyInOw1?: boolean
 };
 
-export const constantValues: Record<string, { description?: string } &  Record<string, Constant>> =
+export const constantValues: Record<string, { description?: string } & Record<string, Constant>> =
 //begin-json
 {
     "AccelReeval": {

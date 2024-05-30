@@ -17,18 +17,18 @@
 
 "use strict";
 // @ts-check
-import { actionKw } from "../data/actions";
-import { constantValues } from "../data/constants";
-import { stringKw } from "../data/localizedStrings";
-import { eventKw, eventPlayerKw, eventTeamKw, funcKw, ruleKw, valueKw } from "../data/other";
-import { valueFuncKw } from "../data/values";
-import { currentLanguage, enableOptimization, fileStack, nbElements, nbHeroesInValue, optimizeForSize, replacementFor0, replacementFor1, replacementForTeam1 } from "../globalVars";
-import { getAstForNull, getAstForTrue, Ast, getAstForFalse, getAstForMinus1, getAstFor0 } from "../utils/ast";
-import { error, functionNameToString } from "../utils/logging";
-import { tabLevel } from "../utils/other";
-import { escapeBadWords, escapeString } from "../utils/strings";
-import { tows } from "../utils/translation";
-import { isTypeSuitable } from "../utils/types";
+import { actionKw } from "../data/actions.js";
+import { constantValues } from "../data/constants.js";
+import { stringKw } from "../data/localizedStrings.js";
+import { eventKw, eventPlayerKw, eventTeamKw, funcKw, ruleKw, valueKw } from "../data/other.js";
+import { valueFuncKw } from "../data/values.js";
+import { currentLanguage, enableOptimization, fileStack, nbElements, nbHeroesInValue, optimizeForSize, replacementFor0, replacementFor1, replacementForTeam1 } from "../globalVars.js";
+import { getAstForNull, getAstForTrue, Ast, getAstForFalse, getAstForMinus1, getAstFor0 } from "../utils/ast.js";
+import { error, functionNameToString } from "../utils/logging.js";
+import { tabLevel } from "../utils/other.js";
+import { escapeBadWords, escapeString } from "../utils/strings.js";
+import { tows } from "../utils/translation.js";
+import { isTypeSuitable } from "../utils/types.js";
 
 export function astRulesToWs(rules: any[]) {
 

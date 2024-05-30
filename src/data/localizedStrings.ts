@@ -15,7 +15,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { heroKw } from "./heroes"
+import { heroKw } from "./heroes.js"
 
 var emptyStrKw = {
     "": {

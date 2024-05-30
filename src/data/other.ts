@@ -17,13 +17,13 @@
 
 "use strict";
 // @ts-check
-import { actionKw } from "./actions";
-import { Constant, constantValues } from "./constants";
-import { opyFuncs } from "./opy/functions";
-import { opyInternalFuncs } from "./opy/internalFunctions";
-import { heroKw } from "./heroes";
-import { valueFuncKw } from "./values";
-import { LocalizableString } from "../types";
+import { actionKw } from "./actions.js";
+import { Constant, constantValues } from "./constants.js";
+import { opyFuncs } from "./opy/functions.js";
+import { opyInternalFuncs } from "./opy/internalFunctions.js";
+import { heroKw } from "./heroes.js";
+import { valueFuncKw } from "./values.js";
+import { LocalizableString } from "../types.js";
 
 export const customGameSettingsKw: Record<string, LocalizableString> =
 //begin-json

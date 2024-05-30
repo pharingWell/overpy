@@ -17,13 +17,13 @@
 
 "use strict";
 
-import { constantValues } from "../data/constants";
-import { funcKw } from "../data/other";
-import { fileStack, suppressedWarnings, currentRuleEvent, currentRuleLabels, currentRuleLabelAccess, currentRuleHasVariableGoto, astParsingFunctions, setFileStack, setCurrentRuleEvent, setCurrentRuleLabels, clearRuleLabelAccess, resetRuleHasVariableGoto, resetCurrentRuleLabels } from "../globalVars";
-import { error, functionNameToString, warn, getTypeCheckFailedMessage, debug } from "../utils/logging";
-import { isTypeSuitable } from "../utils/types";
-import { Ast, getAstFor0, getAstFor0_016, getAstFor1, getAstFor255, getAstForE } from "../utils/ast";
-import { Argument, Value } from "../types";
+import { constantValues } from "../data/constants.js";
+import { funcKw } from "../data/other.js";
+import { fileStack, suppressedWarnings, currentRuleEvent, currentRuleLabels, currentRuleLabelAccess, currentRuleHasVariableGoto, astParsingFunctions, setFileStack, setCurrentRuleEvent, setCurrentRuleLabels, clearRuleLabelAccess, resetRuleHasVariableGoto, resetCurrentRuleLabels } from "../globalVars.js";
+import { error, functionNameToString, warn, getTypeCheckFailedMessage, debug } from "../utils/logging.js";
+import { isTypeSuitable } from "../utils/types.js";
+import { Ast, getAstFor0, getAstFor0_016, getAstFor1, getAstFor255, getAstForE } from "../utils/ast.js";
+import { Argument, Value } from "../types.js";
 
 export function parseAstRules(rules: Ast[]) {
 

@@ -18,7 +18,7 @@
 "use strict";
 
 import { constantValues } from "../../data/constants";
-import { astParsingFunctions } from "../../globalVars";
+import { astParsingFunctions } from "../../globalVars.js";
 import { error } from "../../utils/logging";
 
 astParsingFunctions.__map__ = function(content) {

@@ -17,7 +17,7 @@
 
 "use strict";
 
-import { Argument, LocalizableString, ReturnType } from "../../types";
+import { Argument, LocalizableString, ReturnType } from "../../types.js";
 
 export const opyInternalFuncs: Record<string, {
     args: Argument[] | null,

@@ -17,7 +17,7 @@
 
 "use strict";
 
-import { HeroData } from "../types";
+import { HeroData } from "../types.js";
 
 // @ts-check
 

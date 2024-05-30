@@ -16,11 +16,11 @@
  */
 
 "use strict";
-import { DEBUG_MODE, encounteredWarnings, fileStack, globalSuppressedWarnings, setFileStack, suppressedWarnings } from "../globalVars";
-import { tabLevel } from "./other";
-import { escapeString } from "./strings";
-import { dispTokens } from "./tokens";
-import { isTypeSuitable } from "./types";
+import { DEBUG_MODE, encounteredWarnings, fileStack, globalSuppressedWarnings, setFileStack, suppressedWarnings } from "../globalVars.js";
+import { tabLevel } from "./other.js";
+import { escapeString } from "./strings.js";
+import { dispTokens } from "./tokens.js";
+import { isTypeSuitable } from "./types.js";
 
 //Logging stuff
 export function error(str: string, token?: any): never {

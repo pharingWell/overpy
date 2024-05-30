@@ -17,7 +17,7 @@
 
 "use strict";
 
-import { Argument, ReturnType } from "../../types";
+import { Argument, ReturnType } from "../../types.js";
 
 const opyMemberFuncs: Record<string, {
     description: string,

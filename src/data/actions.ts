@@ -16,7 +16,7 @@
  */
 
 // @ts-check
-import type { LocalizableString, Argument } from "../types";
+import type { LocalizableString, Argument } from "../types.js";
 
 export type Action = {
     description: string,

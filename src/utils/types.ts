@@ -17,12 +17,12 @@
 
 "use strict";
 
-import { parse } from "../compiler/parser";
-import { typeMatrix } from "../globalVars";
-import { Token, Type } from "../types";
-import { Ast, getAstForNumber } from "./ast";
-import { error } from "./logging";
-import { splitTokens } from "./tokens";
+import { parse } from "../compiler/parser.js";
+import { typeMatrix } from "../globalVars.js";
+import { Token, Type } from "../types.js";
+import { Ast, getAstForNumber } from "./ast.js";
+import { error } from "./logging.js";
+import { splitTokens } from "./tokens.js";
 
 /**
  *

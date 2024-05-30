@@ -17,8 +17,8 @@
 
 "use strict";
 
-import { error } from "./logging";
-import { startsWithParenthesis } from "./other";
+import { error } from "./logging.js";
+import { startsWithParenthesis } from "./other.js";
 
 export function decompileCustomGameSettingsDict(dict, kwObj, options={}) {
 	var result = {};

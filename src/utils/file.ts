@@ -17,11 +17,11 @@
 
 "use strict";
 
-import { rootPath, importedFiles } from "../globalVars";
-import { debug, error, warn } from "./logging";
+import { rootPath, importedFiles } from "../globalVars.js";
+import { debug, error, warn } from "./logging.js";
 import * as fs from "fs";
 import * as path from "path";
-import { unescapeString } from "./strings";
+import { unescapeString } from "./strings.js";
 import { FileType, workspace } from "vscode";
 import { URI } from "vscode-uri";
 

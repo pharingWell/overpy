@@ -25,7 +25,7 @@ Ilios Ruins and Busan Downtown have several "centers" which make me believe the 
 Busan Meka Base: 2.32074 * x - 274.76433
 
 */
-export const mapKw: Record<string, import("../types").Map> =
+export const mapKw: Record<string, import("../types.js").Map> =
 //begin-json
 {
     "ayutthaya": {

@@ -17,7 +17,7 @@
 
 "use strict";
 
-import { Argument } from "../../types";
+import { Argument } from "../../types.js";
 
 export const opyKeywords: Record<string, {
     description: string,

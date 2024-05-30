@@ -16,12 +16,12 @@
  */
 
 "use strict";
-import { funcKw } from "../data/other";
 // @ts-check
-import { FileStackMember, currentRuleHasVariableGoto, currentRuleLabelAccess, fileStack } from "../globalVars";
-import { error, functionNameToString } from "./logging";
-import { type ReturnType } from "../types";
-import { isTypeSuitable } from "./types";
+import { funcKw } from "../data/other.js";
+import { currentRuleHasVariableGoto, currentRuleLabelAccess, fileStack } from "../globalVars.js";
+import { error, functionNameToString } from "./logging.js";
+import {FileStackMember, type ReturnType} from "../types.js";
+import { isTypeSuitable } from "./types.js";
 
 export class Ast {
     name: string;
@@ -56,8 +56,8 @@ export class Ast {
             if (name in funcKw) {
                 this.type = funcKw[name].return;
             } else {
-                error("Unknown function name '"+name+"'");
                 this.type = "undefined";
+                error("Unknown function name '"+name+"'");
             }
         } else {
             this.type = type;

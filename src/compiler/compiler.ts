@@ -17,23 +17,23 @@
 
 "use strict";
 // @ts-check
-import { createEvalVM, setRootPath, importedFiles, fileStack, DEBUG_MODE, ELEMENT_LIMIT, activatedExtensions, availableExtensionPoints, compiledCustomGameSettings, encounteredWarnings, enumMembers, globalInitDirectives, globalVariables, macros, nbElements, nbTabs, playerInitDirectives, playerVariables, resetGlobalVariables, subroutines, rootPath, setFileStack, resetMacros } from "../globalVars";
-import { customGameSettingsSchema } from "../data/customGameSettings";
-import { gamemodeKw } from "../data/gamemodes";
-import { heroKw } from "../data/heroes";
-import { mapKw } from "../data/maps";
-import { ruleKw, customGameSettingsKw } from "../data/other";
-import { isNumber, shuffleArray, tabLevel } from "../utils/other";
-import { Ast } from "../utils/ast";
-import { getFilePaths, getFileContent } from "../utils/file";
-import { astToString, warn, error } from "../utils/logging";
-import { tows } from "../utils/translation";
-import { parseAstRules } from "./astParser";
-import { astRulesToWs } from "./astToWorkshop";
-import { parseLines } from "./parser";
-import { tokenize } from "./tokenizer";
-import { addVariable } from "../utils/varNames";
-import { ScriptFileStackMember } from "../types";
+import { createEvalVM, setRootPath, importedFiles, fileStack, DEBUG_MODE, ELEMENT_LIMIT, activatedExtensions, availableExtensionPoints, compiledCustomGameSettings, encounteredWarnings, enumMembers, globalInitDirectives, globalVariables, macros, nbElements, nbTabs, playerInitDirectives, playerVariables, resetGlobalVariables, subroutines, rootPath, setFileStack, resetMacros } from "../globalVars.js";
+import { customGameSettingsSchema } from "../data/customGameSettings.js";
+import { gamemodeKw } from "../data/gamemodes.js";
+import { heroKw } from "../data/heroes.js";
+import { mapKw } from "../data/maps.js";
+import { ruleKw, customGameSettingsKw } from "../data/other.js";
+import { isNumber, shuffleArray, tabLevel } from "../utils/other.js";
+import { Ast } from "../utils/ast.js";
+import { getFilePaths, getFileContent } from "../utils/file.js";
+import { astToString, warn, error } from "../utils/logging.js";
+import { tows } from "../utils/translation.js";
+import { parseAstRules } from "./astParser.js";
+import { astRulesToWs } from "./astToWorkshop.js";
+import { parseLines } from "./parser.js";
+import { tokenize } from "./tokenizer.js";
+import { addVariable } from "../utils/varNames.js";
+import { ScriptFileStackMember } from "../types.js";
 
 /**
  * @returns An object containing the compiled result along with associated metadata

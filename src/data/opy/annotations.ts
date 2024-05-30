@@ -16,8 +16,8 @@
  */
 
 "use strict";
-import { eventKw, eventTeamKw, eventSlotKw } from "../other";
-import { heroKw } from "../heroes";
+import { eventKw, eventTeamKw, eventSlotKw } from "../other.js";
+import { heroKw } from "../heroes.js";
 
 export const opyAnnotations: Record<string, {
     description: string,

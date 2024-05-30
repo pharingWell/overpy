@@ -17,7 +17,7 @@
 
 "use strict";
 
-import { LocalizableString } from "../types";
+import { LocalizableString } from "../types.js";
 
 export const gamemodeKw: Record<string, LocalizableString & {
     defaultTeam1Players?: number,

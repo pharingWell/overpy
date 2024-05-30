@@ -17,17 +17,17 @@
 
 "use strict";
 
-import { setFileStack } from "../globalVars";
-import { Token } from "../types";
-import { Ast } from "../utils/ast";
-import { getFileContent, getFilePaths } from "../utils/file";
-import { debug, error } from "../utils/logging";
-import { safeEval } from "../utils/other";
-import { dispTokens, splitTokens } from "../utils/tokens";
-import { parseType } from "../utils/types";
-import { addSubroutine, addVariable } from "../utils/varNames";
-import { compileCustomGameSettings } from "./compiler";
-import { LogicalLine } from "./tokenizer";
+import { setFileStack } from "../globalVars.js";
+import { Token } from "../types.js";
+import { Ast } from "../utils/ast.js";
+import { getFileContent, getFilePaths } from "../utils/file.js";
+import { debug, error } from "../utils/logging.js";
+import { safeEval } from "../utils/other.js";
+import { dispTokens, splitTokens } from "../utils/tokens.js";
+import { parseType } from "../utils/types.js";
+import { addSubroutine, addVariable } from "../utils/varNames.js";
+import { compileCustomGameSettings } from "./compiler.js";
+import { LogicalLine } from "./tokenizer.js";
 
 
 class WorkshopVar {
