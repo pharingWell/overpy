@@ -17,11 +17,11 @@
 
 "use strict";
 
-import { CustomGameSettingSchema } from "../data/customGameSettings";
-import { error } from "./logging";
-import { tows } from "./translation";
+import { customGameSettingsSchema } from "../data/customGameSettings.js";
+import { error } from "./logging.js";
+import { tows } from "./translation.js";
 
-export function compileCustomGameSettingsDict(providedSettings: Record<string, any>, refDict: CustomGameSettingSchema) {
+export function compileCustomGameSettingsDict(providedSettings: Record<string, any>, refDict: typeof customGameSettingsSchema) {
 	var result = {};
 	for (var key_ of Object.keys(providedSettings)) {
 		var wsKey = tows(key_, refDict);
